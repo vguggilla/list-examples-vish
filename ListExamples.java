@@ -21,9 +21,11 @@ class ListExamples {
 
   // Takes two sorted list of strings (so "a" appears before "b" and so on),
   // and return a new list that has all the strings in both list in sorted order.
-  static List<String> merge(List<String> list1, List<String> list2) {
+  static List<String> merge(List<String> l1, List<String> l2) {
     List<String> result = new ArrayList<>();
     int index1 = 0, index2 = 0;
+    ArrayList<String> list1 = Arrays.asList(l1)
+    ArrayList<String> list2 = Arrays.asList(l2)
     while(index1 < list1.size() && index2 < list2.size()) {
       if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
         result.add(list1.get(index1));
