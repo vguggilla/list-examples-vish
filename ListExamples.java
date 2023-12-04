@@ -24,7 +24,7 @@ class ListExamples {
   static List<String> merge(List<String> list1, List<String> list2) {
     List<String> result = new ArrayList<>();
     int index1 = 0, index2 = 0;
-    while(index1 < list1.size() && index2 < li  st2.size()) {
+    while(index1 < list1.size() && index2 < list2.size()) {
       if(list1.get(index1) < (list2.get(index2))) {
         result.add(list1.get(index1));
         index1 += 1;
