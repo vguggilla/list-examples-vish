@@ -25,22 +25,22 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     int index1 = 0, index2 = 0;
     while(index1 < list1.size() && index2 < list2.size()) {
-      if(list1.get(index1) < (list2.get(index2))) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
         result.add(list1.get(index1));
-        index1 += 1;
+        list1.remove(index1);
       }
       else {
         result.add(list2.get(index2));
-        index2 += 1;
+        list2.remove(index2);
       }
     }
     while(index1 < list1.size()) {
       result.add(list1.get(index1));
-      index1 += 1;
+      list1.remove(index1);
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      index2 += 1;
+      list2.remove(index2);
     }
     return result;
   }
